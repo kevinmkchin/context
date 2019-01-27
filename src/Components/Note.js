@@ -7,7 +7,7 @@ import './Components.css';
 export class Note extends Component {
     render() {
         return (
-            <div className="note">
+            <div id={this.props.inputArray[0]} className="note">
                 {this.props.inputArray.map((val, index) => {
                         if (index === 0) {
                             return null;
