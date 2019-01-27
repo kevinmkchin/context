@@ -2,9 +2,15 @@ div {
     font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
 }
 
-.link {
+.link.black {
     font-weight: bold;
     color: #bad444;
+    text-decoration: none;
+}
+
+.link.white {
+    font-weight: bold;
+    color: 	blueviolet;
     text-decoration: none;
 }
 
@@ -13,7 +19,7 @@ div {
     color: yellowgreen;
 }
 
-.note {
+.note.black {
     color: white;
     margin: 3px;
     padding: 2px;
@@ -21,7 +27,24 @@ div {
     border-radius: 5px;
 }
 
-.definition {
+.note.white {
+    color: #222222;
+    margin: 3px;
+    padding: 2px;
+    background-color: #ffffff;
+    border-radius: 5px;
+}
+
+.definition.white {
+    background-color: #eeeeee;
+    margin: 15px;
+    margin-bottom: 12px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
+}
+
+.definition.black {
     background-color: #333333;
     margin: 15px;
     margin-bottom: 12px;
@@ -29,7 +52,8 @@ div {
     font-size: 18px;
     border-radius: 5px;
 }
-.example{
+
+.example.black{
     margin-left: 15px;
     margin-right: 15px;
     margin-top: -3px;
@@ -39,10 +63,21 @@ div {
     padding-bottom: 10px;
     text-align:center;
     background-color: #333333;
-
 }
 
-.body{
+.example.white {
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -3px;
+    margin-bottom: -15px;
+    border-radius: 5px;
+    padding: 16px;
+    padding-bottom: 10px;
+    text-align:center;
+    background-color: #eeeeee;
+}
+
+.body.black{
     font-size: 18px;
     
     margin-top: 25px;
@@ -54,10 +89,33 @@ div {
     background-color: #333333;
 }
 
-.text{
+.body.white{
+    font-size: 18px;
+    
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding:15px;
+    border-radius: 5px;
+    background-color: #eeeeee;
+}
+
+.text.white{
+    font-size: 18px;
+    color: black;
+    background-color: white;
+    padding: 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+.text.black{
     font-size: 18px;
     color: white;
-
+    background-color: #222222;
     padding: 2px;
     margin-left: 50px;
     margin-right: 50px;
@@ -66,11 +124,25 @@ div {
 }
 
 
-.tooltip {
+.tooltip.black {
     border-radius: 20px;
     padding: 15px;
     
+    color: darkslategrey;
     background-color: aliceblue;
+    max-width: 360px;
+
+    position: absolute;
+    display: none;
+    z-index: 1;
+}
+
+
+.tooltip.white {
+    border-radius: 20px;
+    padding: 15px;
+    color: aliceblue;
+    background-color: #686565;
     max-width: 360px;
 
     position: absolute;
@@ -80,9 +152,4 @@ div {
 
 span:hover > .tooltip {
     display: inline-block;
-}
-
-
-.key, .def, .examples {
-    color: darkslategrey;
 }

@@ -5,8 +5,8 @@ import './Components.css';
 export class Text extends Component {
     render() {
         return (
-            <div className="text">
-                {findLinkWords(this.props.input, this.props.definedWords)}
+            <div className={this.props.bl?"text black":"text white"}>
+                {findLinkWords(this.props.input, this.props.definedWords, this.props.bl)}
             </div>
         );
     }

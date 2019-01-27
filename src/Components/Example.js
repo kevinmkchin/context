@@ -5,8 +5,8 @@ import './Components.css';
 export class Example extends Component {
     render() {
         return (
-            <div className="example">
-                <LaTeX eqn={this.props.input} black={true}></LaTeX>
+            <div className={this.props.bl?"example black":"example white"}>
+                <LaTeX eqn={this.props.input} black={this.props.bl}></LaTeX>
             </div>
         );
     }
