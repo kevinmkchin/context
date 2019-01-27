@@ -33,11 +33,11 @@ class App extends Component {
     return (
       <div className="App">
         <div className="split left">
-          <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
+          <button className="button" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>Compile</span></button>
           <textarea id="txtarea">{testString}</textarea> 
         </div>
         <div className="split right">
-          <button onClick={collapseOrNaw}>Collapse</button>
+          <button className="buttonright" onClick={collapseOrNaw}><span>Collapse</span></button>
           {parse(this.state.str, definedWords(this.state.str))}
         </div>
       </div>
