@@ -20,7 +20,8 @@ export const parse = (rawInput, definedWords) => {
             components.push(
                 <Text
                     input={rawInput.slice(rbEnd+1, i)}
-                    definedWords={definedWords}/>
+                    definedWords={definedWords}
+                />
             );
         } else if (rawInput[i] === RB) {
             // array of string, should put into constructor

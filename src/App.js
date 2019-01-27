@@ -43,7 +43,7 @@ class App extends Component {
       <div className="App">
         <section id="TOOLBAR">
           <ul>
-            <img src={require("./widelogo3.png")} alt="Our logo" height="40" width="160"></img>
+            <img src={require("./widelogo.png")} alt="Our logo" height="40" width="160"></img>
             <li>
               <button className="buttoncompile" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>compile</span></button>
               <button className="buttonviews" onClick={collapseOrNaw}><span>switch view</span></button>
