@@ -4,7 +4,7 @@ div {
 
 .link {
     font-weight: bold;
-    color: rgb(37, 74, 197);
+    color: #0088cc;
 }
 
 .keyword {
@@ -13,22 +13,42 @@ div {
 }
 
 .note {
-    color: rgb(0, 0, 0);
+    color: #FFFFFF;
     margin: 3px;
     padding: 2px;
-    background-color: rgba(255, 255, 255, 0.76);
+    background-color: #222222;
     border-radius: 5px;
 }
 
 .definition {
-    margin: 5px;
+    background-color: #333333;
+    margin: 15px;
+    margin-bottom: 15px;
+    padding: 15px;
+    font-size: 18px;
+    border-radius: 5px;
 }
 .example{
-    margin: 5px;
+    margin-left: 15px;
+    margin-right: 15px;
+    margin-top: -3px;
+    margin-bottom: -15px;
+    border-radius: 5px;
+    padding: 16px;
+    text-align:center;
+    background-color: #333333;
+
 }
 
 .body{
-    margin: 5px;
+    
+    margin-top: 25px;
+    margin-bottom: 15px;
+    margin-left: 15px;
+    margin-right: 15px;
+    padding:15px;
+    border-radius: 5px;
+    background-color: #333333;
 }
 
 .tooltip {
