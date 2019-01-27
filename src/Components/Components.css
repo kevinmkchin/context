@@ -20,6 +20,7 @@ div {
     border-radius: 5px;
 }
 
+<<<<<<< HEAD
 .definition {
     margin: 5px;
 }
@@ -28,18 +29,27 @@ div {
 }
 
 .body{
+=======
+
+.definition, .example, .body {
+>>>>>>> 14dba60bd8e5ab1469f6943d989969f33f3e79b7
     margin: 5px;
 }
 
 .tooltip {
+    border-radius: 20px;
     padding: 15px;
+    
     background-color: aliceblue;
+    max-width: 360px;
+
     position: absolute;
     display: none;
+    z-index: 1;
 }
 
 span:hover > .tooltip {
-    display: block;
+    display: inline-block;
 }
 
 

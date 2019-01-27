@@ -2,12 +2,25 @@ import React, { Component } from 'react';
 import './App.css';
 import { parse, definedWords } from './Parser/parse';
 
-const testString = "{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}";
+let testString = "{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}";
 class App extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      str: '',
+    };
+  }
+
   render() {
     return (
       <div className="App">
-        {parse(testString, definedWords(testString))}
+        <div className="split left">
+          <textarea id="txtarea">{testString}</textarea>
+          <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
+        </div>
+        <div className="split right">
+          {parse(this.state.str, definedWords(this.state.str))}
+        </div>
       </div>
     );
   }
