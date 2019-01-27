@@ -34,6 +34,10 @@ class App extends Component {
     };
   }
 
+  componentDidMount(){
+    document.title = "Context App"
+  }
+
   render() {
     return (
       <div className="App">
