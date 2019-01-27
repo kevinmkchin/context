@@ -1,7 +1,9 @@
 .App {
   background-color: #202020;
 }
-
+body{
+  background-color: #222222;
+}
 /* Split the screen in half */
 .split {
   height: 100%;
@@ -22,13 +24,100 @@
 /* Control the right side */
 .right {
   right: 0;
-  background-color: white;
+
+  background-color: #222222;
+  
 }
 
 textarea {
-  width: 100%;
+  width: 98%;
   display: flex;
   flex: 1;
   border: none;
   resize: none;
+  background-color: #222222;
+  color: white;
+  border-radius: 15px;
+  padding-left:5px;
+  padding-right: 5px;
+  margin-left: 5px;
+}
+
+
+.button {
+  border-radius: 4px;
+  background-color: #0088cc;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  width: 98%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.button span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.button span:after {
+  content: '\00bb';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  right: -20px;
+  transition: 0.5s;
+}
+
+.button:hover span {
+  padding-right: 25px;
+}
+
+.button:hover span:after {
+  opacity: 1;
+  right: 0;
+}
+
+.buttonright {
+  border-radius: 4px;
+  background-color: #ff5fe4;
+  border: none;
+  color: #FFFFFF;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  width: 100%;
+  transition: all 0.5s;
+  cursor: pointer;
+  margin: 5px;
+}
+
+.buttonright span {
+  cursor: pointer;
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+
+.buttonright span:after {
+  content: '\00ab';
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+
+.buttonright:hover span {
+  padding-left: 20px;
+}
+
+.buttonright:hover span:after {
+  opacity: 1;
+  left: 0;
 }
