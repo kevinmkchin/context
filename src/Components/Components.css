@@ -20,6 +20,7 @@ div {
     border-radius: 5px;
 }
 
+
 .definition, .example, .body {
     margin: 5px;
 }
@@ -30,12 +31,12 @@ div {
     background-color: aliceblue;
     position: absolute;
     display: none;
+    z-index: 1;
 }
 
 span:hover > .tooltip {
     display: inline-block;
 }
-
 
 
 .key, .def, .examples {

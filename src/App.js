@@ -14,9 +14,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <textarea id="txtarea">{testString}</textarea>
-        <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
-        {parse(this.state.str, definedWords(this.state.str))}
+        <div className="split left">
+          <textarea id="txtarea">{testString}</textarea>
+          <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
+        </div>
+        <div className="split right">
+          {parse(this.state.str, definedWords(this.state.str))}
+        </div>
       </div>
     );
   }
