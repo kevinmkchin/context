@@ -35,7 +35,7 @@ class App extends Component {
 
         <section id="TOOLBAR">
           <ul>
-            <img src="widelogo1.png" alt="Our logo" height="30" width="120"></img>
+            <img src={require("./widelogo3.png")} alt="Our logo" height="40" width="160"></img>
             <button className="button" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>Compile</span></button>
             <button className="buttonright" onClick={collapseOrNaw}><span>Collapse</span></button>
           </ul>
