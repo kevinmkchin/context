@@ -40,6 +40,7 @@ export const parse = (rawInput, definedWords, bl) => {
                 <Text
                     input={rawInput.slice(rbEnd+1, i).trim()} //trim away start and end white space
                     definedWords={definedWords}
+                    bl={bl}
                 />
             );
         }
@@ -69,10 +70,7 @@ export function findLinkWords(rawInput, definedWords, bl){
     let goodIntegers = [];
     for (let i = 0; i < wordArray.length; i++){
         for(let c = 0; c < definedWords.length; c++){
-            if(definedWords[c].getKey() === wordArray[i]){
-                goodIntegers.push(i);
-            }
-            else if(definedWords[c].getKey().toLowerCase() === wordArray[i].toLowerCase()){
+            if(definedWords[c].getKey().toLowerCase().trim() === wordArray[i].toLowerCase().trim()){
                 goodIntegers.push(i);
             }
         }
@@ -81,7 +79,7 @@ export function findLinkWords(rawInput, definedWords, bl){
         if (goodIntegers.indexOf(i) > -1) {
             let context;
             for (let j = 0; j < definedWords.length; j++) {
-                if (definedWords[j].getKey().toLowerCase() === wordArray[i].toLowerCase()) {
+                if (definedWords[j].getKey().toLowerCase().trim() === wordArray[i].toLowerCase().trim()) {
                     context = definedWords[j];
                     break;
                 }
