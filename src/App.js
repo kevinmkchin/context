@@ -16,7 +16,9 @@ class App extends Component {
       <div className="App">
         <div className="split left">
           <textarea id="txtarea">{testString}</textarea>
-          <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
+          <span>
+            <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
+          </span>
         </div>
         <div className="split right">
           {parse(this.state.str, definedWords(this.state.str))}
@@ -25,6 +27,8 @@ class App extends Component {
     );
   }
 }
+
+
 
 export default App;
 
