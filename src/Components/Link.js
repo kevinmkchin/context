@@ -11,8 +11,6 @@ export class Link extends Component {
             <span>
                 <a href={"#"+this.props.context.getKey()} className="link">
                     {this.props.input}
-                
-                
                 </a>
                 <Tooltip context={this.props.context} />
             </span>
