@@ -24,4 +24,5 @@ export class Context {
     getExamples(){ //returns an array of example strings
         return this.examples;
     }
+
 }
