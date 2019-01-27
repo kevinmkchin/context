@@ -1,0 +1,41 @@
+#headerthing {
+    font-size: 50px;
+    border-radius: 5px;
+    border-style: dashed;
+    border-color: black;
+    width: 675px;
+    height: 53px;
+    text-align: left;
+}
+
+#context {
+    color: rgb(255, 69, 0);
+}
+
+header {
+    font-size: 46px;
+    text-align: center;
+    background-color:#333333;
+    color: #FFFFFF;
+}
+
+body {
+    background-color: #333333;
+    color: #FFFFFF;
+    text-align:left;
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+p {
+    width: 60%;
+    font-size: 18px;
+    text-align: left;
+}
+
+.example {
+    text-align: center;
+    color: rgb(255, 69, 0);
+}
+
+
+
