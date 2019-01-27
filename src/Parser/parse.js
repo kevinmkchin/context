@@ -39,3 +39,16 @@ export const definedWords = (rawInput) => {
     }
     return definedWords;
 }
+
+export function findLinkWords(rawInput, definedWords){
+    let wordArray = rawInput.split(" ");
+    let goodIntegers = [];
+    for (let i = 0; i < wordArray.length; i++){
+        for(let c = 0; c < definedWords.length; c++){
+            if(definedWords[c].getKey === wordArray[i]){
+                goodIntegers.push(i);
+            }
+        }
+    }
+    
+}
