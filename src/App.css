@@ -22,6 +22,7 @@
 /* Control the right side */
 .right {
   right: 0;
+  background-color: white;
 }
 
 textarea {
