@@ -20,8 +20,8 @@ class App extends Component {
     return (
       <div className="App">
         <div className="split left">
-          <textarea id="txtarea">{testString}</textarea>
           <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
+          <textarea id="txtarea">{testString}</textarea> 
         </div>
         <div className="split right">
           {parse(this.state.str, definedWords(this.state.str))}
