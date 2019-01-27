@@ -55,8 +55,15 @@ export function findLinkWords(rawInput, definedWords){
     }
     for (let i = 0; i < wordArray.length; i++) {
         if (goodIntegers.indexOf(i) > -1) {
+            let context;
+            for (let j = 0; j < definedWords.length; j++) {
+                if (definedWords[j].getKey() === wordArray[i]) {
+                    context = definedWords[j];
+                    break;
+                }
+            }
             result.push(
-                <Link input={wordArray[i]}></Link>
+                <Link input={wordArray[i]} context={context}></Link>
             );
             result.push(' ');
         } else {
