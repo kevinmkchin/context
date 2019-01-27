@@ -40,6 +40,11 @@ textarea {
   padding-left:5px;
   padding-right: 5px;
   margin-left: 5px;
+  
+}
+
+::-webkit-scrollbar { 
+  display: none; 
 }
 
 
