@@ -25,6 +25,7 @@ div {
 }
 
 .tooltip {
+    border-radius: 20px;
     padding: 15px;
     background-color: aliceblue;
     position: absolute;
@@ -32,8 +33,9 @@ div {
 }
 
 span:hover > .tooltip {
-    display: block;
+    display: inline-block;
 }
+
 
 
 .key, .def, .examples {
