@@ -33,6 +33,14 @@ export const parse = (rawInput, definedWords) => {
             );  
             rbEnd = i;
         }
+        if (i === rawInput.length-1){ //push again for the very last stuff
+            components.push(
+                <Text
+                    input={rawInput.slice(rbEnd+1, i).trim()} //trim away start and end white space
+                    definedWords={definedWords}
+                />
+            );
+        }
     }
     return components;
 };
