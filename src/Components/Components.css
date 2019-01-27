@@ -23,7 +23,7 @@ div {
 .definition {
     background-color: #333333;
     margin: 15px;
-    margin-bottom: 15px;
+    margin-bottom: 12px;
     padding: 15px;
     font-size: 18px;
     border-radius: 5px;
@@ -35,6 +35,7 @@ div {
     margin-bottom: -15px;
     border-radius: 5px;
     padding: 16px;
+    padding-bottom: 10px;
     text-align:center;
     background-color: #333333;
 

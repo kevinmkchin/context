@@ -38,10 +38,14 @@ textarea {
   resize: none;
   background-color: #222222;
   color: white;
-  border-radius: 15px;
   padding-left:5px;
   padding-right: 5px;
   margin-left: 5px;
+  
+}
+
+::-webkit-scrollbar { 
+  display: none; 
 }
 
 /*TOOLBAR*/
