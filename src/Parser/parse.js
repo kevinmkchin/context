@@ -51,13 +51,16 @@ export function findLinkWords(rawInput, definedWords){
             if(definedWords[c].getKey() === wordArray[i]){
                 goodIntegers.push(i);
             }
+            else if(definedWords[c].getKey().toLowerCase() === wordArray[i].toLowerCase()){
+                goodIntegers.push(i);
+            }
         }
     }
     for (let i = 0; i < wordArray.length; i++) {
         if (goodIntegers.indexOf(i) > -1) {
             let context;
             for (let j = 0; j < definedWords.length; j++) {
-                if (definedWords[j].getKey() === wordArray[i]) {
+                if (definedWords[j].getKey().toLowerCase() === wordArray[i].toLowerCase()) {
                     context = definedWords[j];
                     break;
                 }
