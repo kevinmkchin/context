@@ -14,7 +14,7 @@ export class Note extends Component {
                         } else if (index === 1) {
                             return <Definition input={val} definedWords={this.props.definedWords}  bl={this.props.bl}/>;
                         } else if (index === this.props.inputArray.length - 1) {
-                            return <Body input={val} definedWords={this.props.definedWords} bl={this.props.bl}/>;
+                            return <Body input={val.trim()} definedWords={this.props.definedWords} bl={this.props.bl}/>; //trim away start and end white space
                         } else {
                             return <Example input={val} definedWords={this.props.definedWords} bl={this.props.bl}/>;
                         }
