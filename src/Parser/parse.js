@@ -40,6 +40,7 @@ export const parse = (rawInput, definedWords, bl) => {
                 <Text
                     input={rawInput.slice(rbEnd+1, i).trim()} //trim away start and end white space
                     definedWords={definedWords}
+                    bl={bl}
                 />
             );
         }
