@@ -9,7 +9,7 @@ import { Text } from '../Components/Text';
 
 // returns the components to display
 // generates 
-export const parse = (rawInput, definedWords) => {
+export const parse = (rawInput, definedWords, bl) => {
     let components = [];
     let left;
     let rbEnd; //marks end of bracket
@@ -21,6 +21,7 @@ export const parse = (rawInput, definedWords) => {
                 <Text
                     input={rawInput.slice(rbEnd+1, i)}
                     definedWords={definedWords}
+                    bl={bl}
                 />
             );
         } else if (rawInput[i] === RB) {
@@ -29,6 +30,7 @@ export const parse = (rawInput, definedWords) => {
                 <Note
                     inputArray={rawInput.slice(left + 1, i).split(DL)}
                     definedWords={definedWords}
+                    bl={bl}
                 />
             );  
             rbEnd = i;
@@ -53,7 +55,7 @@ export const definedWords = (rawInput) => {
     return definedWords;
 }
 
-export function findLinkWords(rawInput, definedWords){
+export function findLinkWords(rawInput, definedWords, bl){
     let result = [];
     let wordArray = rawInput.split(" ");
     let goodIntegers = [];
@@ -77,7 +79,7 @@ export function findLinkWords(rawInput, definedWords){
                 }
             }
             result.push(
-                <Link input={wordArray[i]} context={context}></Link>
+                <Link input={wordArray[i]} context={context} bl={bl}></Link>
             );
             result.push(' ');
         } else {

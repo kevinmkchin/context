@@ -31,6 +31,7 @@ class App extends Component {
     super(props);
     this.state = {
       str: '',
+      bl: true
     };
   }
 
@@ -48,7 +49,7 @@ class App extends Component {
               <button className="buttoncompile" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>compile</span></button>
               <button className="buttonviews" onClick={collapseOrNaw}><span>switch view</span></button>
               <a href="./Guide.html" target="_blank"><button className="buttonnormal"><span>how to use</span></button></a>
-              <button className="buttonnormal"><span>settings</span></button>
+              <button className="buttonnormal" onClick={()=>this.setState({bl: !this.state.bl})}><span>toggle theme</span></button>
             </li>
           </ul>
         </section>
@@ -59,8 +60,8 @@ class App extends Component {
             <textarea id="txtarea">{testString}</textarea> 
           </div>
 
-          <div className="split right">
-            {parse(this.state.str, definedWords(this.state.str))}
+          <div className={this.state.bl?"split right black":"split right white"}>
+            {parse(this.state.str, definedWords(this.state.str), this.state.bl)}
           </div>
 
         </section>

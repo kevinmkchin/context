@@ -22,10 +22,15 @@ body{
 }
 
 /* Control the right side */
-.right {
+.right.black {
   right: 0;
   background-color: #222222;
   
+}
+
+.right.white {
+  right: 0;
+  background-color: #ffffff;
 }
 
 textarea {

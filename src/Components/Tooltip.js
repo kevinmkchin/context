@@ -8,7 +8,7 @@ import './Components.css';
 export class Tooltip extends Component {
     render() {
         return (
-            <div className="tooltip">
+            <div className={this.props.bl?"tooltip black":"tooltip white"}>
                 <h2 className="key">{this.props.context.getKey()}</h2>
                 <p className="def"><b>Definition:</b> {this.props.context.getDef()}</p>
                 <p className="examples">
@@ -16,7 +16,7 @@ export class Tooltip extends Component {
                         <b>Examples:</b>
                     </div>
                     {this.props.context.getExamples().map(example => 
-                        <div style={{paddingLeft:10, paddingTop:5}}><LaTeX eqn={example} /></div>
+                        <div style={{paddingLeft:10, paddingTop:5}}><LaTeX eqn={example} black={!this.props.bl}/></div>
                     )}
                 </p>
             </div>
