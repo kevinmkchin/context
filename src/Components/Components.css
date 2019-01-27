@@ -1,0 +1,36 @@
+div {
+    font-family: "Palatino Linotype", "Book Antiqua", Palatino, serif;
+}
+
+.link {
+    font-weight: bold;
+    color: cyan;
+}
+
+.keyword {
+    font-weight: bold;
+    color: yellowgreen;
+}
+
+.note {
+    color: #EEEEEE;
+    margin: 3px;
+    padding: 2px;
+    background-color: #303030;
+    border-radius: 5px;
+}
+
+.definition, .example, .body {
+    margin: 5px;
+}
+
+.tooltip {
+    padding: 15px;
+    background-color: aliceblue;
+    display: none;
+}
+
+
+.key, .def, .examples {
+    color: darkslategrey;
+}
