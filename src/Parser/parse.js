@@ -3,6 +3,8 @@ import { Note } from './../Components/Note';
 import React from 'react';
 import { Context } from './../Context/Context';
 import { Link } from '../Components/Link';
+//import { Body } from '../Components/Body';
+import { Text } from '../Components/Text';
 
 
 // returns the components to display
@@ -10,9 +12,16 @@ import { Link } from '../Components/Link';
 export const parse = (rawInput, definedWords) => {
     let components = [];
     let left;
+    let rbEnd; //marks end of bracket
     for (let i = 0; i < rawInput.length; i++) {
         if (rawInput[i] === LB) {
             left = i;
+            //once left bracket is encountered, collect everything before this and after rbEnd. make that a body
+            components.push(
+                <Text
+                    input={rawInput.slice(rbEnd+1, i)}
+                    definedWords={definedWords}/>
+            );
         } else if (rawInput[i] === RB) {
             // array of string, should put into constructor
             components.push(
@@ -21,6 +30,7 @@ export const parse = (rawInput, definedWords) => {
                     definedWords={definedWords}
                 />
             );  
+            rbEnd = i;
         }
     }
     return components;
