@@ -37,10 +37,23 @@ class App extends Component {
           <textarea id="txtarea">{testString}</textarea> 
         </div>
         <div className="split right">
+          <button onClick={collapseOrNaw}>Collapse</button>
           {parse(this.state.str, definedWords(this.state.str))}
         </div>
       </div>
+      
     );
+  }
+}
+
+
+//you can collapse the left hand side now
+function collapseOrNaw(){
+  var currentSize = document.getElementsByClassName("split right").item(0).style.width;
+  if(currentSize === "50%" || currentSize === ""){
+    document.getElementsByClassName("split right").item(0).style.width = "100%";
+  }else if(currentSize === "100%"){
+    document.getElementsByClassName("split right").item(0).style.width = "50%";
   }
 }
 
