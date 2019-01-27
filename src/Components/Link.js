@@ -8,10 +8,10 @@ import { Tooltip } from './Tooltip';
 export class Link extends Component {
     render() {
         return (
-            <span className="link">
+            <a href={"#"+this.props.context.getKey()} className="link">
                 {this.props.input}
                 <Tooltip context={this.props.context} />
-            </span>
+            </a>
         );
     }
 }
