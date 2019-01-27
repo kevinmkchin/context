@@ -5,7 +5,7 @@
 <head>
 	<meta charset="utf-8" />
 	<link rel="stylesheet" href="guide.css" />
-    <header id="headerthing"><img src="./widelogo3.png" alt="context logo" height="50" width="200">
+    <header id="headerthing"><img src="./widelogo.png"} alt="context logo" height="50" width="200"></img>
         Welcome to <span id="context">context</span>
     </header>
 </head>
@@ -20,10 +20,16 @@
     </div>
 
     <div align="center">
-        <header>How to Use context <a href="#tldr">tldr</a></header>
-        <p>To create a section in, simply use angle brackets like so:</p>
+        <header>How to Use context </header>
+        <div class="tldr"><p class="instruction">tldr; the "formula" for defining sections and creating sections is as follows:</p>
+        <img src="./tldr.png" alt="tldr" class="tldr-image" width= "77%" height="75%"></img>
+        <p class="instruction">The first paramter is the name of the section, the second is the definition, followed by an arbitrary 
+        number of examples, and finally with a body paragraph at the end.</p></div>
+        <span>The body paragraph does not need to end with a "|".</span>
+        <br>
+        <p class="instruction">To create a section in, simply use angle brackets like so:</p>
         <p class="example">< ></p>
-        <p>Everything within these brackets will be grouped into one section. The first word following the opening angle
+        <p class="instruction">Everything within these brackets will be grouped into one section. The first word following the opening angle
             bracket is what the section will be defined as and must be followed with a "|" symbol. For example, we are physics class 
             and want to create a section for notes relating to velocity. We would do this by typing:
         </p>
@@ -31,12 +37,12 @@
         <br>
         <br>
         <span>Note: the word assigned to the title of the section is not case</span>
-        <p>Next comes the definition of the word you just defined. After the |, simply add your definition and end the sentence with a |. 
+        <p> class="instruction"Next comes the definition of the word you just defined. After the |, simply add your definition and end the sentence with a |. 
             Following the previous example, it would look like this:
         </p>
         <p class="example">&lt;velocity|Velocity is a measure of how fast something moves in a particular direction.|</p>
         <span>Note: When you reference a defined word, it is not case sensitive!</span>
-        <p>
+        <p class="instruction">
             After that, you can add as many examples as you want to support your definition. For example:
         </p>
         <p class="example">&lt;velocity|Velocity is a measure of how fast something moves in a particular direction.|
@@ -44,7 +50,7 @@
             In 5 seconds, a bird travels 20m. The bird's velocity is 20m/5s=4m/s.|>
         </p>
         <span>Remember to add the | after each example!</span>
-        <p>
+        <p class="instruction">
             The last sentence that you add after the |, automatically becomes the body paragraph so make sure to sandwich 
             your examples between the definition and the body paragraphs.
         </p>
@@ -54,15 +60,10 @@
                 to our study of kinematics. From velocity we can also learn about information such as acceleration 
                 or displacement>
         </p>
-
-        <a name="tldr"></a><p>tldr; the "formula" for defining sections and creating sections is as follows:</p>
-        <p class="example">&lt;name|definition|example|example|example|example|body paragraph></p>
-        <p>The first paramter is the name of the section, the second is the definition, followed by an arbitrary 
-        number of examples, and finally with a body paragraph at the end.</p>
-        <span>The body paragraph does not need to end with a "|".</span>
     </div>
 </body>
 
 <footer>
     <span>Created by: Victor Wang, Kevin Chin, Derek Chen, and Marco Ser</span>
 </footer>
+</html>
