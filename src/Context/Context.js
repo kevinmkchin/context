@@ -1,9 +1,18 @@
 export class Context {
 
-    constructor(key, definition){
-        this.key = key;
-        this.definition = definition;
-        this.example = [];
+    constructor(defArray){
+        this.key;
+        this.defintion;
+        this.examples = [];
+        for(i = 0; i < defArray.length-1; i++){
+            if(i == 0){
+                this.key = defArray[0];
+            }else if(i == 1){
+                this.defintion = defArray[1];
+            }else{
+                this.examples.push(defArray[i])
+            }
+        }
     }
 
     getKey(){
@@ -11,10 +20,10 @@ export class Context {
     }
 
     getDef(){
-        return this.definition;
+        return this.defintion;
     }
 
-    addExample(eg){
-        this.example.push(eg);
+    getExamples(){ //returns an array of example strings
+        return this.examples;
     }
 }
