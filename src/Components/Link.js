@@ -9,10 +9,10 @@ export class Link extends Component {
     render() {
         return (
             <span>
-                <a href={"#"+this.props.context.getKey()} className="link">
+                <a href={"#"+this.props.context.getKey()} className={this.props.bl?"link black":"link white"}>
                     {this.props.input}
                 </a>
-                <Tooltip context={this.props.context} />
+                <Tooltip context={this.props.context} bl={this.props.bl} />
             </span>
         );
     }
