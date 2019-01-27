@@ -49,7 +49,7 @@ class App extends Component {
             <li>
               <button className="buttoncompile" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>compile</span></button>
               <button className="buttonviews" onClick={collapseOrNaw}><span>switch view</span></button>
-              <a href="./Guide.html" target="_blank"><button className="buttonnormal"><span>how to use</span></button></a>
+              <a href="./Guide" target="_blank"><button className="buttonnormal"><span>how to use</span></button></a>
               <button className="buttonnormal" onClick={()=>this.setState({bl: !this.state.bl})}><span>toggle theme</span></button>
             </li>
           </ul>
