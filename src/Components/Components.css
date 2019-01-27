@@ -23,3 +23,12 @@ div {
 .definition, .example, .body {
     margin: 5px;
 }
+
+.tooltip {
+    padding: 15px;
+    background-color: aliceblue;
+}
+
+.key, .def, .examples {
+    color: darkslategrey;
+}
