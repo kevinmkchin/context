@@ -51,9 +51,13 @@ class App extends Component {
 function collapseOrNaw(){
   var currentSize = document.getElementsByClassName("split right").item(0).style.width;
   if(currentSize === "50%" || currentSize === ""){
-    document.getElementsByClassName("split right").item(0).style.width = "100%";
-  }else if(currentSize === "100%"){
+    document.getElementsByClassName("split right").item(0).style.width = "75%";
+    document.getElementsByClassName("split left").item(0).style.width = "0";
+    document.getElementsByClassName("split right").item(0).style.right = "12.5%";
+  }else if(currentSize === "75%"){
     document.getElementsByClassName("split right").item(0).style.width = "50%";
+    document.getElementsByClassName("split left").item(0).style.width = "50%";
+    document.getElementsByClassName("split right").item(0).style.right = "0";
   }
 }
 
