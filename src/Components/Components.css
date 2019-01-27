@@ -27,8 +27,9 @@ div {
 .tooltip {
     padding: 15px;
     background-color: aliceblue;
-    display: none;
+
 }
+
 
 
 .key, .def, .examples {
