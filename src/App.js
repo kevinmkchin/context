@@ -2,7 +2,12 @@ import React, { Component } from 'react';
 import './App.css';
 import { parse, definedWords } from './Parser/parse';
 
-let testString = "{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}{de|A de is a what|y'+2=0|y''+2=0|How do we solve a de ?}{ode|A ode is a what|y'+2=0|}";
+let testString = 
+`{derivative|
+The derivative of a function of a real variable measures the sensitivity to change of the function value (output value) with respect to a change in its argument (input value).|
+d(sin x)/dx = cos x|
+d(3x + 2)/dx = 3|
+A derivative is bad.}`;
 class App extends Component {
   constructor(props) {
     super(props);
@@ -14,13 +19,19 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <textarea id="txtarea">{testString}</textarea>
-        <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
-        {parse(this.state.str, definedWords(this.state.str))}
+        <div className="split left">
+          <button onClick={() => this.setState({str: document.getElementById("txtarea").value})}>Compile</button>
+          <textarea id="txtarea">{testString}</textarea> 
+        </div>
+        <div className="split right">
+          {parse(this.state.str, definedWords(this.state.str))}
+        </div>
       </div>
     );
   }
 }
+
+
 
 export default App;
 
