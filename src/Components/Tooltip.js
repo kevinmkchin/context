@@ -9,8 +9,8 @@ export class Tooltip extends Component {
         return (
             <div className="tooltip">
                 <h2 className="key">{this.props.context.getKey()}</h2>
-                <p className="def">Definition: {this.props.context.getDef()}</p>
-                <p className="examples">Examples: {this.props.context.getExamples().map(example => <div>{example}</div>)}</p>
+                <p className="def"><b>Definition:</b> {this.props.context.getDef()}</p>
+                <p className="examples"><b>Examples:</b> {this.props.context.getExamples().map(example => <div>{example}</div>)}</p>
             </div>
         );
     }
