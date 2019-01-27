@@ -3,7 +3,10 @@ import './App.css';
 import { parse, definedWords } from './Parser/parse';
 
 let testString = 
-`<Derivative|
+`------ Edit me!!! ------
+
+
+<Derivative|
 The derivative of a function of a real variable measures the sensitivity to change of the function value (output value) with respect to a change in its argument (input value).|
 \\frac{d}{dx}\\sin x = \\cos x|
 \\frac{d}{dx}(3x^2+2)=6x|
@@ -32,14 +35,13 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-
         <section id="TOOLBAR">
           <ul>
             <img src={require("./widelogo3.png")} alt="Our logo" height="40" width="160"></img>
             <li>
               <button className="buttoncompile" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>compile</span></button>
               <button className="buttonviews" onClick={collapseOrNaw}><span>switch view</span></button>
-              <button className="buttonnormal"><span>how to use</span></button>
+              <a href="./Guide.html" target="_blank"><button className="buttonnormal"><span>how to use</span></button></a>
               <button className="buttonnormal"><span>settings</span></button>
             </li>
           </ul>
