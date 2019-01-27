@@ -4,7 +4,8 @@ div {
 
 .link {
     font-weight: bold;
-    color: #0088cc;
+    color: #bad444;
+    text-decoration: none;
 }
 
 .keyword {
@@ -13,7 +14,7 @@ div {
 }
 
 .note {
-    color: #FFFFFF;
+    color: white;
     margin: 3px;
     padding: 2px;
     background-color: #222222;
@@ -42,6 +43,7 @@ div {
 }
 
 .body{
+    font-size: 18px;
     
     margin-top: 25px;
     margin-bottom: 15px;
@@ -51,6 +53,18 @@ div {
     border-radius: 5px;
     background-color: #333333;
 }
+
+.text{
+    font-size: 18px;
+    color: white;
+
+    padding: 2px;
+    margin-left: 50px;
+    margin-right: 50px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
 
 .tooltip {
     border-radius: 20px;
