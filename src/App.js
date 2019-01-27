@@ -10,7 +10,7 @@ These are my notes for UBC calculus courses! I wrote them using the web applicat
 The derivative of a function of a real variable measures the sensitivity to change of the function value (output value) with respect to a change in its argument (input value).|
 \\frac{d}{dx}\\sin x = \\cos x|
 \\frac{d}{dx}(3x^2+2)=6x|
-A derivative is bad.>
+How do you calculate a derivative in calculus?>
 
 For example, I can hover over derivative because it has been previously defined.
 
@@ -26,6 +26,7 @@ A = 2[0,0,2]|
 B = 5[9, 20, 1]|
 If the length of a vector is 1 unit, then the length of 2a is 2. What is the length of -1a: is it 1, or -1?.>`
 ;
+
 class App extends Component {
   constructor(props) {
     super(props);
