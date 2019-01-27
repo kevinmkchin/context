@@ -86,3 +86,4 @@ function collapseOrNaw(){
 
 export default App;
 
+//Ok reverted to good version
