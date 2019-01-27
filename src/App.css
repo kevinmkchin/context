@@ -10,7 +10,7 @@ body{
   width: 50%; /* change this value to 100% to make the output take up entire screen */
   position: fixed;
   z-index: 1;
-  top: 10%; /*height of toolbar*/
+  /*top: 10%; /*height of toolbar*/
   overflow-x: hidden;
 }
 
@@ -59,6 +59,7 @@ textarea {
   color: white;
   margin-top: 0;
   margin-bottom: 0;
+  height: 70px;
 }
 #TOOLBAR ul{
   width: 100%;
