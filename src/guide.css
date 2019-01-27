@@ -6,6 +6,7 @@
     width: 675px;
     height: 53px;
     text-align: left;
+    padding-bottom: 5px;
 }
 
 #context {
@@ -35,7 +36,19 @@ p {
 .example {
     text-align: center;
     color: rgb(255, 69, 0);
+    font-size:18px;
 }
+
+.instruction {
+    font-size:23px;
+}
+
+.tldr {
+    border-radius: 5px;
+    border-style: dashed;
+    width:50%;
+}
+
 
 
 
