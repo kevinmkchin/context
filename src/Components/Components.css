@@ -4,7 +4,7 @@ div {
 
 .link {
     font-weight: bold;
-    color: cyan;
+    color: rgb(37, 74, 197);
 }
 
 .keyword {
@@ -13,15 +13,21 @@ div {
 }
 
 .note {
-    color: #EEEEEE;
+    color: rgb(0, 0, 0);
     margin: 3px;
     padding: 2px;
-    background-color: #303030;
+    background-color: rgba(255, 255, 255, 0.76);
     border-radius: 5px;
 }
 
+.definition {
+    margin: 5px;
+}
+.example{
+    margin: 5px;
+}
 
-.definition, .example, .body {
+.body{
     margin: 5px;
 }
 
