@@ -2,6 +2,8 @@ import { DL, LB, RB } from './constants';
 import { Note } from './../Components/Note';
 import React from 'react';
 import { Context } from './../Context/Context';
+import { Link } from '../Components/Link';
+
 
 // returns the components to display
 // generates 
@@ -41,14 +43,26 @@ export const definedWords = (rawInput) => {
 }
 
 export function findLinkWords(rawInput, definedWords){
+    let result = [];
     let wordArray = rawInput.split(" ");
     let goodIntegers = [];
     for (let i = 0; i < wordArray.length; i++){
         for(let c = 0; c < definedWords.length; c++){
-            if(definedWords[c].getKey === wordArray[i]){
+            if(definedWords[c].getKey() === wordArray[i]){
                 goodIntegers.push(i);
             }
         }
     }
-    
+    for (let i = 0; i < wordArray.length; i++) {
+        if (goodIntegers.indexOf(i) > -1) {
+            result.push(
+                <Link input={wordArray[i]}></Link>
+            );
+            result.push(' ');
+        } else {
+            result.push(wordArray[i]);
+            result.push(' ');
+        }
+    }
+    return result;
 }
