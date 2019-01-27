@@ -4,7 +4,7 @@ import './Components.css';
 export class Definition extends Component {
     render() {
         return (
-            <div className="definition">
+            <div className={this.props.bl?"definition black":"definition white"}>
                 {this.props.input}
             </div>
         );
