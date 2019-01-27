@@ -3,7 +3,14 @@ import './App.css';
 import { parse, definedWords } from './Parser/parse';
 
 let testString = 
+<<<<<<< HEAD
 `<Derivative|
+=======
+`------ Edit me!!! ------
+
+
+<Derivative|
+>>>>>>> parent of b3f5e92... edited the demo starting text
 The derivative of a function of a real variable measures the sensitivity to change of the function value (output value) with respect to a change in its argument (input value).|
 \\frac{d}{dx}\\sin x = \\cos x|
 \\frac{d}{dx}(3x^2+2)=6x|
