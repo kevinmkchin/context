@@ -27,7 +27,12 @@ div {
 .tooltip {
     padding: 15px;
     background-color: aliceblue;
+    position: absolute;
+    display: none;
+}
 
+span:hover > .tooltip {
+    display: block;
 }
 
 
