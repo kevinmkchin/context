@@ -35,13 +35,13 @@ class App extends Component {
 
         <section id="TOOLBAR">
           <ul>
-<<<<<<< HEAD
-            <img src={require('./widelogo1.png')} alt="Our logo" height="30px" width="1024px" />
-=======
             <img src={require("./widelogo3.png")} alt="Our logo" height="40" width="160"></img>
->>>>>>> 78eb5d1b4a7f9148e62b73913a3ce626fb25b050
-            <button className="button" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>Compile</span></button>
-            <button className="buttonright" onClick={collapseOrNaw}><span>Collapse</span></button>
+            <li>
+              <button className="buttoncompile" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>compile</span></button>
+              <button className="buttonviews" onClick={collapseOrNaw}><span>switch view</span></button>
+              <button className="buttonnormal"><span>how to use</span></button>
+              <button className="buttonnormal"><span>settings</span></button>
+            </li>
           </ul>
         </section>
 
