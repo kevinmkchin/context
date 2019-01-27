@@ -6,13 +6,12 @@ body{
 }
 /* Split the screen in half */
 .split {
-  height: 100%;
+  height: 88%;
   width: 50%; /* change this value to 100% to make the output take up entire screen */
   position: fixed;
   z-index: 1;
   top: 10%; /*height of toolbar*/
   overflow-x: hidden;
-
 }
 
 /* Control the left side */
@@ -38,6 +37,7 @@ textarea {
   resize: none;
   background-color: #222222;
   color: white;
+  font-size: 16px;
   padding-left:5px;
   padding-right: 5px;
   margin-left: 5px;
@@ -49,39 +49,51 @@ textarea {
 }
 
 /*TOOLBAR*/
-#TOOLBAR ul{
+#TOOLBAR{
   display: flex;
   background-color: rgb(17, 17, 17);
   color: white;
   margin-top: 0;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  margin-bottom: 0;
+}
+#TOOLBAR ul{
+  width: 100%;
+}
+#TOOLBAR ul li{
+  width: 80%;
+  float: right;
+  margin-left: 0;
+  padding: 0;
+  list-style: none;
 }
 
-/*LEFT BUTTON*/
-.button {
+
+
+/* BUTTON COMPILE */
+.buttoncompile {
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+
   border-radius: 4px;
-  background-color: #0088cc;
+  background-color: white;
   border: none;
-  color: #FFFFFF;
+  color: rgb(255, 69, 0);
+  font-weight: bold;
   text-align: center;
   font-size: 18px;
   padding: 5px;
-  width: 20%;
+  width: 18%;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
   left:0;
 }
-
-.button span {
+.buttoncompile span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-
-.button span:after {
+.buttoncompile span:after {
   content: '\00bb';
   position: absolute;
   opacity: 0;
@@ -89,41 +101,40 @@ textarea {
   right: -20px;
   transition: 0.5s;
 }
-
-.button:hover span {
+.buttoncompile:hover span {
   padding-right: 25px;
 }
-
-.button:hover span:after {
+.buttoncompile:hover span:after {
   opacity: 1;
   right: 0;
 }
 
 
-/* RIGHT BUTTON */
-.buttonright {
+
+/* BUTTON VIEWS */
+.buttonviews {
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+
   border-radius: 4px;
-  background-color: #ff5fe4;
+  background-color: rgb(255, 69, 0);
   border: none;
-  color: #FFFFFF;
+  color: white;
   text-align: center;
   font-size: 18px;
   padding: 5px;
-  width: 20%;
+  width: 18%;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
   right:0;
 }
-
-.buttonright span {
+.buttonviews span {
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
-
-.buttonright span:after {
+.buttonviews span:after {
   content: '\00ab';
   position: absolute;
   opacity: 0;
@@ -131,15 +142,53 @@ textarea {
   left: -20px;
   transition: 0.5s;
 }
-
-.buttonright:hover span {
+.buttonviews:hover span {
   padding-left: 20px;
 }
-
-.buttonright:hover span:after {
+.buttonviews:hover span:after {
   opacity: 1;
   left: 0;
 }
+
+
+/*BUTTOM NORMAL*/
+.buttonnormal {
+  font-family: "Lucida Console", "Lucida Sans Typewriter", monaco, "Bitstream Vera Sans Mono", monospace;
+
+  border-radius: 4px;
+  background-color: rgb(255, 69, 0);
+  border: none;
+  color: white;
+  text-align: center;
+  font-size: 18px;
+  padding: 5px;
+  width: 18%;
+  transition: all 0.5s;
+  margin: 5px;
+  right:0;
+}
+.buttonnormal span {
+  display: inline-block;
+  position: relative;
+  transition: 0.5s;
+}
+.buttonnormal span:after {
+  position: absolute;
+  opacity: 0;
+  top: 0;
+  left: -20px;
+  transition: 0.5s;
+}
+.buttonnormal:hover span {
+  padding-left: 20px;
+}
+.buttonnormal:hover span:after {
+  opacity: 1;
+  left: 0;
+}
+
+
+
 
 /*get rid of scrollbar showing up*/
 ::-webkit-scrollbar{
