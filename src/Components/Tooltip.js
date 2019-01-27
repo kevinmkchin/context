@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { LaTeX } from './LaTeX';
 import './Components.css';
 
 // given this.props.context, a Context object
@@ -10,7 +11,7 @@ export class Tooltip extends Component {
             <div className="tooltip">
                 <h2 className="key">{this.props.context.getKey()}</h2>
                 <p className="def"><b>Definition:</b> {this.props.context.getDef()}</p>
-                <p className="examples"><b>Examples:</b> {this.props.context.getExamples().map(example => <div>{example}</div>)}</p>
+                <p className="examples"><b>Examples:</b> {this.props.context.getExamples().map(example => <div><LaTeX eqn={example} /></div>)}</p>
             </div>
         );
     }
