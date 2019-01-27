@@ -10,8 +10,9 @@ body{
   width: 50%; /* change this value to 100% to make the output take up entire screen */
   position: fixed;
   z-index: 1;
-  top: 0;
+  top: 10%; /*height of toolbar*/
   overflow-x: hidden;
+
 }
 
 /* Control the left side */
@@ -43,7 +44,17 @@ textarea {
   margin-left: 5px;
 }
 
+/*TOOLBAR*/
+#TOOLBAR ul{
+  display: flex;
+  background-color: rgb(17, 17, 17);
+  color: white;
+  margin-top: 0;
+  padding-top: 5px;
+  padding-bottom: 5px;
+}
 
+/*LEFT BUTTON*/
 .button {
   border-radius: 4px;
   background-color: #0088cc;
@@ -52,10 +63,11 @@ textarea {
   text-align: center;
   font-size: 18px;
   padding: 5px;
-  width: 98%;
+  width: 20%;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  left:0;
 }
 
 .button span {
@@ -83,6 +95,8 @@ textarea {
   right: 0;
 }
 
+
+/* RIGHT BUTTON */
 .buttonright {
   border-radius: 4px;
   background-color: #ff5fe4;
@@ -91,10 +105,11 @@ textarea {
   text-align: center;
   font-size: 18px;
   padding: 5px;
-  width: 100%;
+  width: 20%;
   transition: all 0.5s;
   cursor: pointer;
   margin: 5px;
+  right:0;
 }
 
 .buttonright span {
@@ -120,4 +135,9 @@ textarea {
 .buttonright:hover span:after {
   opacity: 1;
   left: 0;
+}
+
+/*get rid of scrollbar showing up*/
+::-webkit-scrollbar{
+  display: none;
 }

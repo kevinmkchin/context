@@ -32,14 +32,27 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <div className="split left">
-          <button className="button" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>Compile</span></button>
-          <textarea id="txtarea">{testString}</textarea> 
-        </div>
-        <div className="split right">
-          <button className="buttonright" onClick={collapseOrNaw}><span>Collapse</span></button>
-          {parse(this.state.str, definedWords(this.state.str))}
-        </div>
+
+        <section id="TOOLBAR">
+          <ul>
+            <img src="widelogo1.png" alt="Our logo" height="30" width="120"></img>
+            <button className="button" onClick={() => this.setState({str: document.getElementById("txtarea").value})}><span>Compile</span></button>
+            <button className="buttonright" onClick={collapseOrNaw}><span>Collapse</span></button>
+          </ul>
+        </section>
+
+        <section id="EDITOR_AND_OUTPUT">
+
+          <div className="split left">
+            <textarea id="txtarea">{testString}</textarea> 
+          </div>
+
+          <div className="split right">
+            {parse(this.state.str, definedWords(this.state.str))}
+          </div>
+
+        </section>
+
       </div>
       
     );
