@@ -33,7 +33,7 @@ div {
 }
 
 span:hover > .tooltip {
-    display: block;
+    display: inline-block;
 }
 
 
