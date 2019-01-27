@@ -7,7 +7,7 @@ export class Tooltip extends Component {
     render() {
         return (
             <div className="tooltip">
-                this is bad
+                {this.props.context.getDef()}
             </div>
         );
     }
